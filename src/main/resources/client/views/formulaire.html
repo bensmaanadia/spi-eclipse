@@ -1,0 +1,27 @@
+
+ <div class="container" ng-controller = "FormationCtrl">
+  <h1>Formation</h1>
+
+<form ng-submit ="ajouterFormation(data)">
+  <div class="form-group">
+    <label>Code Formation</label>
+    <input  class="form-control" id="codeFormation" ng-model= "data.codeFormation">
+    <label>Debut Accreditation</label>
+    <input  class="form-control" id="debutAccreditation" ng-model= "data.debutAccreditation">
+    <label>Diplome</label>
+    <input  class="form-control" id="diplome" ng-model= "data.diplome">
+    <label>Double Diplome</label>
+    <input  class="form-control" id="doubleDiplome" ng-model= "data.doubleDiplome">
+    <label>Fin Accreditation</label>
+    <input  class="form-control" id="finAccreditation" ng-model= "data.finAccreditation">
+    <label>Annee</label>
+    <input  class="form-control" id="n0Annee" ng-model= "data.n0Annee">
+    <label>Nom Formation</label>
+    <input  class="form-control" id="nomFormation" ng-model= "data.nomFormation">
+	<input  type="submit" id="add">
+	
+  </div>
+</form>
+  
+
+</div>
