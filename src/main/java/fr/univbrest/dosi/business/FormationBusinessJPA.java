@@ -59,8 +59,15 @@ public class FormationBusinessJPA implements FormationBusiness{
 		Formation formationRecherchee =  formationRepository.findByNomFormation(nomFormation);
 		
 		return formationRecherchee;
-}
+    }
 	
+	public boolean modifierFormation(Formation formation) {
+		formationRepository.save(formation);
+		return true;
+    }
 	
-	
+	public Long count() {
+		return formationRepository.count();
+		
+    }
 }

@@ -8,18 +8,19 @@
     <table class="table">
       <tr>
         <th>Code Formation</th>
-        <th>Value</th>
+        <th>Nom Formation</th>
+        <th>Accreditation</th>
+        <th>Diplome</th>
+        <th>Actions</th>
         <th></th>
         <th></th>
       </tr>
       <tr ng-repeat="f in formations">
         <td contenteditable="true">{{f.codeFormation}}</td>
+        <td contenteditable="true">{{f.nomFormation}}</td>
         <td contenteditable="true">{{f.debutAccreditation}}</td>
         <td contenteditable="true">{{f.diplome}}</td>
-        <td contenteditable="true">{{f.doubleDiplome}}</td>
-        <td contenteditable="true">{{f.finAccreditation}}</td>
-        <td contenteditable="true">{{f.n0Annee}}</td>
-        <td contenteditable="true">{{f.nomFormation}}</td>
+        
         <td>
           <span  ng-click="supprimerFormation(f.codeFormation)" class="table-remove glyphicon glyphicon-remove"></span>
          </td> 

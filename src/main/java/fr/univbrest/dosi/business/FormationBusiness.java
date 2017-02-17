@@ -15,4 +15,8 @@ public interface FormationBusiness {
 	public abstract Formation getFormationParCodeFormation(String codeFormation);
 
     public abstract Formation getFormationParNomFormation(String nomFormation);
+
+    public boolean  modifierFormation(Formation formation);
+    
+    public Long count();
 }

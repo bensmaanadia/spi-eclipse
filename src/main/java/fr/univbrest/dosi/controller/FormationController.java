@@ -56,5 +56,16 @@ public class FormationController {
 		
 	}
 
+	@RequestMapping( value = "/", method = RequestMethod.PUT)
+	public void modiferFormation(@RequestBody Formation formation){
+		this.formationBusiness.modifierFormation(formation);
+		
+	}
+	
+	@RequestMapping( value = "/count")
+	public Long count(){
+		return this.formationBusiness.count();
+		
+	}
 }
 

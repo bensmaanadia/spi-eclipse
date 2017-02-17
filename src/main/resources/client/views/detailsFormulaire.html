@@ -1,27 +1,29 @@
-<div class="container" ng-controller = "FormationCtrl">
+<div class="container" ng-controller = "FormationCtrl"  >
   <h1>Formation</h1>
 
-
-  <div class="form-group">
+<form ng-submit ="modifierFormation(formation)">
+  <div class=" col-md-8 form-group"  >
     
     <label>Code Formation</label>
-    <input type="text" class="form-control" id="nomFormation"  ng-readonly="true" value="{{formation.codeFormation}}">
+    <input type="text" class="form-control" id="nomFormation"  ng-readonly="!edit"  ng-model="formation.codeFormation">
 	<label>Debut Accreditation</label>
-    <input  class="form-control" id="debutAccreditation" ng-readonly="true" value="{{formation.debutAccreditation}}">
+    <input  class="form-control" id="debutAccreditation" ng-readonly="!edit"  ng-model="formation.debutAccreditation">
     <label>Diplome</label>
-    <input  class="form-control" id="diplome" ng-readonly="true" value="{{formation.diplome}}">
+    <input  class="form-control" id="diplome" ng-readonly="!edit"  ng-model="formation.diplome">
     <label>Double Diplome</label>
-    <input  class="form-control" id="doubleDiplome" ng-readonly="true" value="{{formation.doubleDiplome}}">
+    <input  class="form-control" id="doubleDiplome" ng-readonly="!edit"  ng-model="formation.doubleDiplome">
     <label>Fin Accreditation</label>
-    <input  class="form-control" id="finAccreditation" ng-readonly="true" value="{{formation.finAccreditation}}">
+    <input  class="form-control" id="finAccreditation" ng-readonly="!edit"  ng-model="formation.finAccreditation">
     <label>Annee</label>
-    <input  class="form-control" id="n0Annee" ng-readonly="true" value="{{formation.n0Annee}}">
+    <input  class="form-control" id="n0Annee" ng-readonly="!edit"  ng-model="formation.n0Annee">
     <label>Nom Formation</label>
-    <input  class="form-control" id="nomFormation" ng-readonly="true" value="{{formation.nomFormation}}">
-	<span  ng-click="" class="glyphicon glyphicon-edit"></span>
+    <input  class="form-control" id="nomFormation" ng-readonly="!edit"  ng-model="formation.nomFormation">
 	
+	<a ng-click="edit='false'"><span class="glyphicon glyphicon-edit">Modifier</span></a>
+	<span  class="glyphicon glyphicon-ok"><input class="glyphicon glyphicon-edit" ng-if="edit=='false'" type="submit" id="add" value="Valider"></span>
+	<a href ="#formation"><span class="glyphicon glyphicon-remove" >Retour</span></a>
   </div>
 
-  
+  </form>
 
 </div>
